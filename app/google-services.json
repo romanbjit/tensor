@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:693454222521:android:74e8322a7a7a3e75",
+        "mobilesdk_app_id": "1:693454222521:android:845c417c5e3a3fe9",
         "android_client_info": {
-          "package_name": "com.bjitgroup.tensor"
+          "package_name": "com.dreampany.tensor"
         }
       },
       "oauth_client": [

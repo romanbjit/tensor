@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bjitgroup.tensor">
+    package="com.dreampany.tensor">
 
     <application
         android:allowBackup="true"

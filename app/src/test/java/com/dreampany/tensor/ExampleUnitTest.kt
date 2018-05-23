@@ -1,4 +1,4 @@
-package com.bjitgroup.tensor
+package com.dreampany.tensor
 
 import org.junit.Test
 
