@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">frame</string>
+
+    <string name="title">Title</string>
+    <string name="home">Home</string>
+    <string name="more">More</string>
+    <string name="tools">Tools</string>
+
+    <string name="new_items">New Items</string>
+
+    <string name="more_apps">More Apps</string>
+    <string name="title_feedback">Send Feedback</string>
+    <string name="settings">Settings</string>
+    <string name="about_us">About Us</string>
+    <string name="rate_us">Rate Us</string>
+
+</resources>
