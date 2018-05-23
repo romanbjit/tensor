@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.bjitgroup.tensor", appContext.packageName)
+        assertEquals("com.dreampany.todo", appContext.packageName)
     }
 }
