@@ -11,8 +11,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.dreampany.frame.data.model.Task
-import com.dreampany.frame.data.util.AndroidUtil
-import com.dreampany.frame.data.util.TextUtil
+import com.dreampany.frame.util.AndroidUtil
+import com.dreampany.frame.util.TextUtil
 import com.dreampany.frame.ui.activity.BaseActivity
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken

@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.dreampany.frame.data.model.Response;
-import com.dreampany.frame.data.util.ViewUtil;
+import com.dreampany.frame.util.ViewUtil;
 import com.dreampany.frame.injector.ActivityScoped;
 import com.dreampany.frame.ui.fragment.BaseMenuFragment;
 import com.dreampany.tensor.R;

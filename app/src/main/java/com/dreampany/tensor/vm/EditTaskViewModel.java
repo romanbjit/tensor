@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
 
 import com.dreampany.frame.data.enums.Kind;
 import com.dreampany.frame.data.model.Response;
-import com.dreampany.frame.data.util.TextUtil;
+import com.dreampany.frame.util.TextUtil;
 import com.dreampany.frame.rx.RxFacade;
 import com.dreampany.frame.vm.BaseViewModel;
 import com.dreampany.tensor.R;

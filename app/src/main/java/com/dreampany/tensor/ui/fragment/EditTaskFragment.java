@@ -8,16 +8,16 @@ import android.view.Menu;
 import android.view.View;
 
 import com.dreampany.frame.data.model.Response;
-import com.dreampany.frame.data.util.ViewUtil;
 import com.dreampany.frame.injector.ActivityScoped;
 import com.dreampany.frame.ui.fragment.BaseMenuFragment;
+import com.dreampany.frame.util.AndroidUtil;
+import com.dreampany.frame.util.ViewUtil;
 import com.dreampany.tensor.R;
 import com.dreampany.tensor.data.model.Task;
 import com.dreampany.tensor.databinding.FragmentEditTaskBinding;
 import com.dreampany.tensor.ui.model.TaskItem;
 import com.dreampany.tensor.ui.model.UiTask;
 import com.dreampany.tensor.vm.EditTaskViewModel;
-import com.yinglan.keyboard.HideUtil;
 
 import javax.inject.Inject;
 
@@ -111,7 +111,7 @@ public class EditTaskFragment extends BaseMenuFragment
                         ViewUtil.showSnackbar(binding.editTitle, R.string.saved_task_message_successfully);
                         break;
                 }
-                HideUtil.hideSoftKeyboard(getParent());
+                AndroidUtil.hideSoftInput(getParent());
                 Timber.v("SUCCESS");
                 break;
 

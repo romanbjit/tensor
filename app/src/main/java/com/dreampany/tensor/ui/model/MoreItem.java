@@ -5,7 +5,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dreampany.frame.data.model.Base;
-import com.dreampany.frame.data.util.TextUtil;
+import com.dreampany.frame.util.TextUtil;
 import com.dreampany.frame.ui.adapter.SmartAdapter;
 import com.dreampany.frame.ui.model.BaseItem;
 import com.dreampany.tensor.R;

@@ -1,4 +1,4 @@
-package com.dreampany.frame.data.util;
+package com.dreampany.frame.util;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

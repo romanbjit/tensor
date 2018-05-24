@@ -166,7 +166,7 @@ dependencies {
 
     //keyboard
     //api 'com.github.Kyash:rx-keyboard-detector:0.1.2'
-    api 'com.yinglan.keyboard:hidekeyboard:1.1.3'
+    //api 'com.yinglan.keyboard:hidekeyboard:1.1.3'
 
     //dexter - permission
     api 'com.karumi:dexter:4.2.0'

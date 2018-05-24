@@ -14,8 +14,8 @@ import android.view.WindowManager
 import com.afollestad.aesthetic.Aesthetic
 import com.dreampany.frame.R
 import com.dreampany.frame.data.model.Task
-import com.dreampany.frame.data.util.BarUtil
-import com.dreampany.frame.data.util.FragmentUtil
+import com.dreampany.frame.util.BarUtil
+import com.dreampany.frame.util.FragmentUtil
 import com.dreampany.frame.ui.fragment.BaseFragment
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken

@@ -6,8 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.View;
 
-import com.dreampany.frame.data.util.AndroidUtil;
-import com.dreampany.frame.data.util.ViewUtil;
+import com.dreampany.frame.util.SettingsUtil;
+import com.dreampany.frame.util.ViewUtil;
 import com.dreampany.frame.databinding.FragmentItemsBinding;
 import com.dreampany.frame.injector.ActivityScoped;
 import com.dreampany.frame.ui.fragment.BaseMenuFragment;
@@ -107,10 +107,10 @@ public class MoreFragment extends BaseMenuFragment implements
     }
 
     private void rateUs() {
-        AndroidUtil.rateUs(getActivity());
+        SettingsUtil.rateUs(getActivity());
     }
 
     private void sendFeedback() {
-        AndroidUtil.feedback(getActivity());
+        SettingsUtil.feedback(getActivity());
     }
 }
