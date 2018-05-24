@@ -14,6 +14,12 @@ import com.dreampany.frame.data.model.Task
 import com.dreampany.frame.data.util.AndroidUtil
 import com.dreampany.frame.data.util.TextUtil
 import com.dreampany.frame.ui.activity.BaseActivity
+import com.karumi.dexter.MultiplePermissionsReport
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.DexterError
+import com.karumi.dexter.listener.PermissionRequest
+import com.karumi.dexter.listener.PermissionRequestErrorListener
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import java.io.Serializable
 
 
@@ -22,7 +28,7 @@ import java.io.Serializable
  * BJIT Group
  * hawladar.roman@bjitgroup.com
  */
-abstract class BaseFragmentKt : Fragment() {
+abstract class BaseFragmentKt : Fragment(), MultiplePermissionsListener, PermissionRequestErrorListener {
 
     protected lateinit var binding: ViewDataBinding
     protected var currentTask: Task<*>? = null
@@ -85,6 +91,18 @@ abstract class BaseFragmentKt : Fragment() {
         } else {
             getParent()
         }
+    }
+
+    override fun onPermissionsChecked(report: MultiplePermissionsReport) {
+
+    }
+
+    override fun onPermissionRationaleShouldBeShown(permissions: List<PermissionRequest>, token: PermissionToken) {
+
+    }
+
+    override fun onError(error: DexterError) {
+
     }
 
     protected fun getParent(): BaseActivity? {

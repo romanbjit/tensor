@@ -15,14 +15,21 @@ import android.view.ViewGroup;
 
 import com.dreampany.frame.data.model.Task;
 import com.dreampany.frame.data.util.AndroidUtil;
-import com.dreampany.frame.data.util.TextUtil;
 import com.dreampany.frame.ui.activity.BaseActivity;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.DexterError;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.PermissionRequestErrorListener;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
 import java.io.Serializable;
+import java.util.List;
 
 import dagger.android.support.DaggerFragment;
 
-public abstract class BaseFragment extends DaggerFragment {
+public abstract class BaseFragment extends DaggerFragment
+        implements MultiplePermissionsListener, PermissionRequestErrorListener {
 
     protected ViewDataBinding binding;
     protected Task currentTask;
@@ -93,6 +100,21 @@ public abstract class BaseFragment extends DaggerFragment {
             return view.getContext();
         }
         return getParent();
+    }
+
+    @Override
+    public void onPermissionsChecked(MultiplePermissionsReport report) {
+
+    }
+
+    @Override
+    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
+
+    }
+
+    @Override
+    public void onError(DexterError error) {
+
     }
 
     protected BaseActivity getParent() {

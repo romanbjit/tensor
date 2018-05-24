@@ -10,12 +10,19 @@ import android.support.v7.widget.Toolbar
 import android.view.MenuItem
 import android.view.View
 import android.view.Window
+import android.view.WindowManager
 import com.afollestad.aesthetic.Aesthetic
 import com.dreampany.frame.R
 import com.dreampany.frame.data.model.Task
 import com.dreampany.frame.data.util.BarUtil
 import com.dreampany.frame.data.util.FragmentUtil
 import com.dreampany.frame.ui.fragment.BaseFragment
+import com.karumi.dexter.MultiplePermissionsReport
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.DexterError
+import com.karumi.dexter.listener.PermissionRequest
+import com.karumi.dexter.listener.PermissionRequestErrorListener
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import dagger.Lazy
 import dagger.android.support.DaggerAppCompatActivity
 import java.io.Serializable
@@ -26,7 +33,7 @@ import java.io.Serializable
  * BJIT Group
  * hawladar.roman@bjitgroup.com
  */
-abstract class BaseActivityKt : DaggerAppCompatActivity() {
+abstract class BaseActivityKt : DaggerAppCompatActivity(), MultiplePermissionsListener, PermissionRequestErrorListener {
 
     protected lateinit var binding: ViewDataBinding
     protected var currentTask: Task<*>? = null
@@ -49,13 +56,20 @@ abstract class BaseActivityKt : DaggerAppCompatActivity() {
         return true
     }
 
+    open fun isScreenOn(): Boolean {
+        return false
+    }
+
     protected abstract fun onStartUi(state: Bundle?)
 
     protected abstract fun onStopUi()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Aesthetic.attach(this)
+        //Aesthetic.attach(this)
         super.onCreate(savedInstanceState)
+        if (isScreenOn()) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
         val layoutId = getLayoutId()
         if (layoutId != 0) {
@@ -119,6 +133,18 @@ abstract class BaseActivityKt : DaggerAppCompatActivity() {
     public String key() {
         return "base";
     }*/
+
+    override fun onPermissionsChecked(report: MultiplePermissionsReport) {
+
+    }
+
+    override fun onPermissionRationaleShouldBeShown(permissions: List<PermissionRequest>, token: PermissionToken) {
+
+    }
+
+    override fun onError(error: DexterError) {
+
+    }
 
     private fun initLayout(layoutId: Int) {
         if (isFullScreen()) {

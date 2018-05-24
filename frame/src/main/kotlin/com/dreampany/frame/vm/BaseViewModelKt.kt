@@ -10,5 +10,5 @@ import com.dreampany.frame.rx.RxFacade
  * BJIT Group
  * hawladar.roman@bjitgroup.com
  */
-class BaseViewModelKt<T>(application: Application, facade: RxFacade) : AndroidViewModel(Application()) {
+class BaseViewModelKt<T>(application: Application, facade: RxFacade) : AndroidViewModel(application) {
 }
